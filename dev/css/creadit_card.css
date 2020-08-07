@@ -1,0 +1,146 @@
+body {
+  background: linear-gradient(to right, #64b3f4, #c2e59c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #f4f3f3; }
+
+.transaction {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem; }
+
+.form-transaction {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 40px;
+  grid-gap: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35); }
+  .form-transaction .form-header {
+    margin: 0 0 25px 0; }
+  .form-transaction .form-group {
+    position: relative;
+    border-bottom: 1px solid white; }
+    .form-transaction .form-group:hover::after {
+      transform: translateY(1px);
+      width: 100%; }
+    .form-transaction .form-group::after {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      content: "";
+      width: 0%;
+      height: 2px;
+      background-color: #52bae0;
+      transform: translateY(1px);
+      transform-origin: left;
+      transition: 0.3s; }
+    .form-transaction .form-group .form-control {
+      padding: 8px 0;
+      background: 0 0;
+      border: none;
+      color: white;
+      outline: none; }
+      .form-transaction .form-group .form-control:valid ~ .form-label,
+      .form-transaction .form-group .form-control:focus ~ .form-label {
+        transform: translateY(-20px); }
+      .form-transaction .form-group .form-control:valid ~ .form-label {
+        color: #52bae0; }
+    .form-transaction .form-group .expires-input {
+      background: 0 0;
+      border: none;
+      color: white;
+      outline: none;
+      width: 4rem; }
+    .form-transaction .form-group .form-label {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      transition: 0.3s;
+      transform-origin: left; }
+
+.btn {
+  position: relative;
+  padding: 8px 20px;
+  border-radius: 0;
+  overflow: hidden;
+  width: 100%;
+  margin: 18px 0 9px 0;
+  border: 1px solid #52bae0;
+  color: #52bae0;
+  background: 0 0;
+  transition: 0.3s;
+  outline-color: #4ec0e9;
+  outline-style: none;
+  font-size: medium; }
+  .btn::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, #52bae0, transparent);
+    transform: translateX(-100%);
+    transition: 0.6s; }
+  .btn:hover {
+    color: #f4f3f3;
+    background: transparent;
+    box-shadow: 0 0 20px 10px rgba(51, 152, 219, 0.5); }
+    .btn:hover::before {
+      transform: translateX(100%); }
+
+.card-transaction {
+  max-width: 350px;
+  display: grid;
+  justify-content: space-between;
+  grid-gap: 10px;
+  grid-template-areas: "logo bank-name" "name chip" "card-number card-number" "expires-end ccv";
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35), 0px 0px 0px 3px #555 inset; }
+  .card-transaction * {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-size: xx-small; }
+    .card-transaction * *:nth-child(2) {
+      color: #52bae0; }
+  .card-transaction .chip,
+  .card-transaction .logo {
+    height: 1.5rem; }
+  .card-transaction .card-number {
+    justify-self: center;
+    grid-area: card-number; }
+    .card-transaction .card-number *:nth-child(2) {
+      font-size: medium; }
+
+.modal {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s;
+  transform-origin: top; }
+  .modal .modal-content {
+    width: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35); }
