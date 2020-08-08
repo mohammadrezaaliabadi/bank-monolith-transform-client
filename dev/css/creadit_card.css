@@ -140,7 +140,42 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
+    grid-gap: 2rem;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109), 0 1px 1px rgba(128, 128, 128, 0.155), 0 2.1px 2.1px rgba(128, 128, 128, 0.195), 0 4.4px 4.4px rgba(128, 128, 128, 0.241), 0 12px 12px rgba(128, 128, 128, 0.35); }
+    .modal .modal-content .content-group {
+      position: relative;
+      display: flex;
+      flex-direction: column; }
+      .modal .modal-content .content-group label {
+        color: #52bae0; }
+      .modal .modal-content .content-group:hover::after {
+        transform: translateY(1px);
+        width: 100%; }
+      .modal .modal-content .content-group::after {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: #52bae0;
+        transform: translateY(1px);
+        transform-origin: left;
+        transition: 0.3s; }
+
+#isOk i {
+  transition: 0.6s; }
+
+#isOk:hover i {
+  color: #00c851; }
+
+#btnTransform i,
+#btnGetInfo i {
+  transition: 0.6s; }
+
+#btnTransform:hover i,
+#btnGetInfo:hover i {
+  color: #ffd300; }

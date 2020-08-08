@@ -13,11 +13,25 @@
   <body>
     <div class="modal">
       <div class="modal-content">
-        <p class="message">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem, vel ullam quidem nis
-        </p>
-        <button class="btn" id="isOk">OK</button>
+        <div class="content-group">
+          <label for="transactionNumber"><i class="fas fa-money-check-alt"></i> Transaction Number</label>
+          <span id="transactionNumber"></span>
+        </div>
+        <div class="content-group">
+          <label for="fromName"><i class="far fa-user"></i> From Name</label>
+          <span id="fromName"></span>
+        </div>
+        <div class="content-group">
+          <label for="toName"><i class="far fa-user"></i> To Name</label>
+          <span id="toName"></span>
+        </div>
+        <div class="content-group">
+          <label for="balanceTransform">Balance <i class="fas fa-dollar-sign"></i></label>
+          <span id="balanceTransform"></span>
+        </div>
+        <button class="btn" id="isOk">
+          OK <i class="far fa-check-circle"></i> </i>
+        </button>
       </div>
     </div>
     <div class="transaction">
@@ -32,7 +46,7 @@
             required
           />
           <label class="form-label" for="fromCardNumber"
-            >From Card Number</label
+            ><i class="fas fa-money-check"></i> From Card Number</label
           >
         </div>
         <div class="form-group">
@@ -43,7 +57,9 @@
             id="toCardNumber"
             required
           />
-          <label class="form-label" for="toCardNumber">To Card Number</label>
+          <label class="form-label" for="toCardNumber"
+            ><i class="fas fa-money-check"></i> To Card Number</i
+          ></label>
         </div>
         <div class="form-group">
           <input
@@ -53,10 +69,10 @@
             id="balance"
             required
           />
-          <label class="form-label" for="balance">Balance</label>
+          <label class="form-label" for="balance">Balance <i class="fas fa-dollar-sign"></i></i></label>
         </div>
 
-        <button id="btnTransaction" class="btn btn-primary">GetInfo</button>
+        <button id="btnGetInfo" class="btn btn-primary">GetInfo <i class="fas fa-info-circle"></i></button>
         <div class="form-group">
           <input
             class="form-control"
@@ -65,7 +81,7 @@
             id="cvv"
             required
           />
-          <label class="form-label" for="cvv">CVV</label>
+          <label class="form-label" for="cvv"><i class="far fa-credit-card"></i> CVV</label>
         </div>
         <div class="form-group">
           <div class="e-end">
@@ -114,7 +130,9 @@
             />
           </div>
 
-          <label for="expiresEnd">Expires End</label>
+          <label for="expiresEnd"
+            ><i class="far fa-calendar-alt"></i> Expires End</i
+          ></label>
         </div>
         <div class="form-group">
           <input
@@ -124,9 +142,13 @@
             id="password"
             required
           />
-          <label class="form-label" for="password">Password</label>
+          <label class="form-label" for="password"
+            ><i class="fas fa-lock"></i> Password</i
+          ></label>
         </div>
-        <button id="btnTransform" class="btn btn-primary">Transform</button>
+        <button id="btnTransform" class="btn btn-primary">
+          Transform <i class="fas fa-coins"></i></i>
+        </button>
       </div>
       <div class="card-transaction">
         <img src="img/logo.png" class="logo" />
